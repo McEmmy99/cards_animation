@@ -4,6 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .container {
@@ -15,15 +16,15 @@ body {
 
 .card {
     min-height: 80vh;
-    width: 35rem;
+    width: 20rem;
     border-radius: 30px;
-    padding: 0rem 5rem;
+    padding: 0rem 4rem;
     box-shadow: 0 20px 20px rgba(0,0,0,0.2);
 }
 
 .headshot img {
-    width: 15rem;
-    height: 20rem;
+    width: 20rem;
+    z-index: 2;
 }
 
 .headshot {
@@ -34,12 +35,59 @@ body {
 }
 
 .circle {
-    width: 15rem;
-    height: 15rem;
+    width: 20rem;
+    height: 10rem;
     background: linear-gradient(
         to right,
         rgba(245,70,66,0.75),
         rgba(8,83,156,0.75)
     );
     position: absolute;
+    /* border-radius: 50%; */
+    z-index: 1;
+}
+
+.info > h1 {
+    font-size: xx-large;
+    font-weight: larger;
+}
+
+.description > h3 {
+    font-weight: lighter;
+    font-size: medium;
+}
+
+.sizes {
+    display: flex;
+    justify-content: space-between;
+}
+.sizes > button {
+    background: none;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 35px;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+    font-weight: bold;
+    color: #338320;
+}
+
+button.active {
+    background: #338320;
+    color: white;
+}
+
+.ping {
+    margin-top: 30px;
+}
+
+.ping > button {
+    width: 100%;
+    padding: 1rem 0rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    background: #338320;
+    font-weight: bold;
 }
